@@ -2,4 +2,61 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<style>
+body {
+  margin: 0;
+  background: #0f172a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.signup-box {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.signup-box input {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.signup-box button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: orange;
+  color: white;
+  cursor: pointer;
+}
+
+  .signup-box button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 94, 0, 0.5);
+}
+  
+</style>
+</head>
+<body>
+
+<div class="signup-box">
+  <h2 style="color:white;">Create Account</h2>
+  <input type="text" placeholder="Enter your username...">
+  <br>
+  <button onclick="window.location.href='index.html?entered=true'">
+    Continue
+  </button>
+</div>
+
+</body>
+</html>
