@@ -163,7 +163,19 @@ header nav a:hover { text-decoration: underline; }
 </section>
 
 <script>
-/* SHOW GAME APP ON SIGNUP */
+// CHECK IF COMING BACK FROM SIGNUP
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("entered") === "true") {
+  document.getElementById("landingPage").style.display = "none";
+  document.getElementById("gameApp").style.display = "block";
+  document.getElementById("popupBg").classList.add("active");
+
+  setTimeout(() => {
+    document.getElementById("gameApp").scrollIntoView({ behavior: "smooth" });
+  }, 100);
+}
+  /* SHOW GAME APP ON SIGNUP */
 document.getElementById("signupBtn").addEventListener("click", () => {
   document.getElementById("landingPage").style.display = "none"; // hide landing
   document.getElementById("gameApp").style.display = "block";    // show game section
@@ -234,7 +246,6 @@ const gamesList = [
   {name:"Highway Moto", img:"moto.png", file:"games/moto.html", category:"Driving"},
 ];
 
-  <hero onclick="document.location='page2.html'">Sign Up</hero>
 
 /* DOM ELEMENTS */
 const container = document.getElementById("gamesContainer");
