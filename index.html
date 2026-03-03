@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,6 +73,40 @@ header nav a:hover { text-decoration: underline; }
   transform: translateY(0px);
   box-shadow: 0 3px 10px rgba(255, 94, 0, 0.4);
 }
+
+#preview {
+  background: #F97316;
+  color: white;
+  width: 95%;
+  max-width: 130px;
+  height: 90%;
+  max-height: 43px;
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  position: absolute;
+  top: 300px;
+  right: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Ensures text is centered inside */
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#preview:hover {
+ transform: scale(1.2); border-opacity: 1.15;
+   box-shadow: 0 6px 18px rgba(255, 94, 0, 0.5);
+                      border: 1px solid yellow;} 
+
+ #preview:active {
+  transform: translateY(0px);
+  box-shadow: 0 3px 10px rgba(255, 94, 0, 0.4);
+}
+ 
+ 
 
 /* GAME APP */
 #gameApp { display: none; background: #111; color: white; text-align: center; min-height: 100vh; padding: 20px; }
@@ -155,6 +190,10 @@ header nav a:hover { text-decoration: underline; }
   </div>
 </div>
 
+<div>
+<button id="preview">Preview Calc</button>
+</div>
+
 <!-- WELCOME POPUP -->
 <div class="backblur" id="welcomePopup">
   <div class="popup">
@@ -203,6 +242,14 @@ signinContinue.addEventListener("click", () => {
   welcomePopupEl.classList.add("active");
   renderGames();
 });
+
+        document.getElementById("preview").addEventListener("click", function () {
+            try {
+                // Replace this URL with the RAW or HTML link to your file in GitHub
+                window.location.href = "https://educationforever.github.io/calculator.solver/calc.html";
+                
+                // Alternative: open in a new tab
+                //
 
 // --- GAMES DATA ---
 const gamesList = [
