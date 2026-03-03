@@ -125,15 +125,18 @@ button:active {
 
     <button onclick="clearDisplay()" class="operator-btn">C</button>
   </div>
+</div>
 
   <div> <button id="preview">Preview Calc</button> </div>
 </div>
 
-<script>
-document.getElementById("back").addEventListener("click", function () {
+  <script>
+  document.getElementById("back").addEventListener("click", function () {
     window.location.href = "https://educationforever.github.io/calculator.solver/index.html";
 });
-  
+  </script>
+
+<script>
   const display = document.getElementById("display");
 
 function appendToDisplay(input){
