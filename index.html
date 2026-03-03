@@ -232,13 +232,6 @@ const landingPage = document.getElementById("landingPage");
 const gameApp = document.getElementById("gameApp");
 const welcomePopupEl = document.getElementById("welcomePopup");
 
-  <script>
-document.getElementById("preview").addEventListener("click", function () {
-    // Opens calc.html in the same tab
-    window.location.href = "https://educationforever.github.io/calculator.solver/calc.html";
-});
-</script>
-
 getStartedBtn.addEventListener("click", () => signinPopupEl.classList.add("active"));
 signinContinue.addEventListener("click", () => {
   const val = signinInput.value.trim();
@@ -248,6 +241,10 @@ signinContinue.addEventListener("click", () => {
   gameApp.style.display = "block";
   welcomePopupEl.classList.add("active");
   renderGames();
+});
+
+  document.getElementById("preview").addEventListener("click", function () {
+    window.location.href = "https://educationforever.github.io/calculator.solver/calc.html";
 });
 
 // --- GAMES DATA ---
