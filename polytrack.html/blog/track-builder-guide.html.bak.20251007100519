@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track Builder Bible: From idea to published custom track</title>
+  <meta name="description" content="A clear, step-by-step flow for Polytrack track building: blueprint, editor setup, imports, debugging, publishing, and troubleshooting tips.">
+  <link rel="canonical" href="https://polytrack.best/blog/track-builder-guide">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Track Builder Bible: From idea to published custom track","author":{"@type":"Organization","name":"Polytrack"},"datePublished":"2025-10-04","dateModified":"2025-10-04","mainEntityOfPage":"https://polytrack.best/blog/track-builder-guide"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://polytrack.best/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://polytrack.best/blog/"},{"@type":"ListItem","position":3,"name":"Track Builder Fundamentals"}]}</script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <header style="border-bottom:1px solid #e5e7eb;background:#ffffff;position:sticky;top:0;z-index:40">
+    <div style="max-width:960px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
+      <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#1f2937" aria-label="Polytrack Home">
+        <img src="/assets/logo.svg" alt="Polytrack logo" style="height:24px;width:24px">
+        <span style="font-weight:600">Polytrack</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:16px">
+        <nav class="hidden md:flex items-center gap-6 text-sm" style="gap:16px;font-size:14px">
+          <a href="/" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">Home</a>
+          <a href="/features" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">Features</a>
+          <a href="/what-is-polytrack" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">What is</a>
+          <a href="/how-to-play" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">How to Play</a>
+          <a href="/why-play" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">Why Play</a>
+          <a href="/faq" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">FAQ</a>
+          <a href="/blog/" class="hover:text-sky-700 transition-colors" style="color:#334155;text-decoration:none">Blog</a>
+        </nav>
+        <a href="/play" class="hidden md:inline-flex" style="background-color:#0284c7;color:#fff;border-radius:6px;padding:8px 16px;text-decoration:none;font-size:14px;font-weight:500;white-space:nowrap">Play Now</a>
+        <button id="nav-toggle" class="md:hidden" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:#fff;color:#334155" onclick="(function (m) { m.style.display = m.style.display === 'block' ? 'none' : 'block'; })(document.getElementById('nav-mobile'))">Menu</button>
+      </div>
+    </div>
+    <div id="nav-mobile" class="md:hidden" style="border-top:1px solid #e5e7eb;background:#ffffff;display:none">
+      <div style="max-width:1024px;margin:0 auto;padding:8px 16px">
+        <a href="/" style="display:block;padding:8px 0;color:#334155;text-decoration:none">Home</a>
+        <a href="/blog/" style="display:block;padding:8px 0;color:#334155;text-decoration:none">Blog</a>
+        <a href="/play" style="display:block;padding:8px 0;color:#334155;text-decoration:none">Play Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-10">
+    <article class="max-w-4xl mx-auto px-4 md:px-6 prose prose-slate">
+      <h1>Track Builder Bible: From idea to published custom track</h1>
+      <p class="lead leading-relaxed">This guide lays out a straightforward loop for Polytrack building: blueprint the run, tune the editor, manage imports, debug with data, publish safely, and keep a troubleshooting checklist. Follow the six steps below to turn sketches into repeatable, readable tracks.</p>
+
+      <ol class="list-decimal list-inside space-y-6">
+        <li>
+          <h2 class="mt-0">Blueprint: target lap time, difficulty curve, theme</h2>
+          <p>Pick a target lap time (short 30–40s, standard 50–70s) and write a difficulty curve that starts friendly, spikes in the mid-section, and rewards mastery on the finish. Choose a theme that drives materials and lighting, and document all constraints so every future edit references the same plan.</p>
+        </li>
+        <li>
+          <h2 class="mt-0">Editor basics: camera, grid, and modules</h2>
+          <p>Calibrate camera angle and grid density until landmarks stay readable. Curate reusable modules, name them consistently, and prioritize line readability—use guard rails, contrasting textures, or lighting cues to telegraph turns before players arrive.</p>
+        </li>
+        <li>
+          <h2 class="mt-0">Imports and version control</h2>
+          <p>Track the source, purpose, and version for every imported asset. Experiment on copies before touching the live build, and note any collision or lighting side effects together with rollback steps. A lightweight changelog prevents regressions.</p>
+        </li>
+        <li>
+          <h2 class="mt-0">Debug loop: measure with “show last test path”</h2>
+          <p>Time every geometry change and compare ghost lines to the path overlay. Heavy steering corrections expose poor lines; wobbles after ramps hint at excess tilt or missing buffers. Log the issue → hypothesis → change → retest cycle until lap times stabilize.</p>
+        </li>
+        <li>
+          <h2 class="mt-0">Publishing workflow</h2>
+          <p>Run a readability health check: two fresh testers should finish a lap without memorization, and at least one should improve across ten laps. Prepare a thumbnail that shows the racing line, describe the rhythm in one sentence, and publish with rollback notes.</p>
+        </li>
+        <li>
+          <h2 class="mt-0">Troubleshooting FAQ</h2>
+          <ul>
+            <li><strong>Looks great but drives poorly:</strong> cut decor density, boost line contrast, and widen sightlines.</li>
+            <li><strong>Players miss entries:</strong> telegraph earlier with rails, arrows, or floor texture changes.</li>
+            <li><strong>Ramp landings feel unstable:</strong> reduce tilt, extend buffer space, and retest with the path overlay.</li>
+            <li><strong>Lap times fluctuate:</strong> flatten hidden bumps, align modules, and reinforce a single clean racing line.</li>
+          </ul>
+        </li>
+      </ol>
+    </article>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-slate-50" style="border-top:1px solid #e5e7eb;background:#f8fafc">
+    <div style="max-width:1024px;margin:0 auto;padding:24px 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <p class="text-xs text-slate-500"><span id="y"></span> Polytrack. All rights reserved.</p>
+      <nav style="display:flex;gap:16px;font-size:14px">
+        <a href="/legal-documents.html" class="hover:text-sky-700" style="color:#334155;text-decoration:none">Legal</a>
+        <a href="/privacy-policy.html" class="hover:text-sky-700" style="color:#334155;text-decoration:none">Privacy</a>
+        <a href="/terms-of-service.html" class="hover:text-sky-700" style="color:#334155;text-decoration:none">Terms</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const el = document.getElementById('y');
+      if (el) el.textContent = new Date().getFullYear().toString();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .game-aspect {
+    @apply relative w-full;
+    padding-top: 75%; /* 4:3 aspect ratio */
+  }
+  
+  .game-aspect > iframe {
+    @apply absolute inset-0 w-full h-full border-0;
+  }
+  
+  .skeleton {
+    background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 37%, #e5e7eb 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+  }
+  
+  .content-section {
+    @apply leading-relaxed;
+  }
+  
+  .content-section h2 {
+    @apply leading-tight;
+  }
+  
+  .content-section p {
+    @apply leading-relaxed;
+  }
+  
+  /* Game container optimizations */
+  #game-shell {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+  
+  #game-shell:hover {
+    @apply -translate-y-0.5 shadow-2xl;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-polytrack-600 text-white px-6 py-3 text-sm font-medium hover:bg-polytrack-700 focus:outline-none focus:ring-2 focus:ring-polytrack-400 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-slate-200 px-6 py-3 text-sm font-medium hover:bg-slate-50 transition-colors;
+  }
+  
+  /* Card styles */
+  .feature-card {
+    @apply bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow;
+  }
+  
+  /* Navigation styles */
+  .nav-link {
+    @apply text-slate-600 hover:text-slate-900 transition-colors;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+  
+  #game-shell {
+    transition: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
