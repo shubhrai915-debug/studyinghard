@@ -1,0 +1,13 @@
+name: Inject Header/Footer (Deprecated)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This workflow is deprecated. Use Quality Gate instead."

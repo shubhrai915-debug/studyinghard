@@ -1,0 +1,34 @@
+name: Quality Gate
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies (ci)
+        run: npm ci
+
+      - name: Sanitize (dry-run)
+        run: node scripts/sanitize-files.mjs --fail-on-change
+
+      - name: Apply layout (dry-run)
+        run: node scripts/apply-layout.mjs --fail-on-change
+
+      - name: Build
+        run: npm run build
+
